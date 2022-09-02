@@ -135,7 +135,7 @@ To use a specific version, you can pull a versioned tag. You can view the
 in the Docker Hub Registry.
 
 ```console
-docker pull enclaive/python-sgx:[TAG]
+docker pull enclaive/ruby-sgx:[TAG]
 ```
 
 <!-- BUILD THE IMAGE -->
@@ -143,7 +143,7 @@ docker pull enclaive/python-sgx:[TAG]
 If you wish, you can also build the image yourself.
 
 ```console
-docker build -t enclaive/python-sgx:latest 'https://github.com/enclaive/enclaive-docker-ruby-sgx.git#master'
+docker build -t enclaive/ruby-sgx:latest 'https://github.com/enclaive/enclaive-docker-ruby-sgx.git#master'
 ```
 
 
@@ -157,7 +157,7 @@ Run
 ``
 docker-compose up -d
 ``
-to start the enclaved python application.
+to start the enclaved ruby application.
 
 <!-- CONTRIBUTING -->
 ## Contributing
