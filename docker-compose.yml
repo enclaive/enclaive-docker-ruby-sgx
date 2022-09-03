@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  gramine-ruby:
+    image: enclave/gramine-ruby:latest
+    container_name: "gramine-ruby"
+    build: .
+    volumes:
+      - /var/run/aesmd/aesm.socket:/var/run/aesmd/aesm.socket
+      - /tmp/secret:/app/secret
+    devices:
+      - "/dev/sgx_enclave:/dev/sgx_enclave"
