@@ -7,10 +7,10 @@ COPY ./app/ /app/
 
 WORKDIR /manifest
 
-COPY ./ruby.manifest.template  /app/ruby.manifest.template
+COPY ruby.manifest.template  .
 
 RUN gramine-argv-serializer "/usr/bin/ruby3.0" "/app/Hello.rb" > ruby_args.txt \
-    && ./manifest ruby
+    && ./manifest.sh ruby
 
-ENTRYPOINT [ "/entrypoint/entrypoint.sh" ]
-CMD ["ruby"]
+ENTRYPOINT [ "/entrypoint/enclaive.sh" ]
+CMD ["ruby", "/app/Hello.rb"]

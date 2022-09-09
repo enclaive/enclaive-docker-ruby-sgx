@@ -1,7 +1,7 @@
 loader.entrypoint = "file:{{ gramine.libos }}"
 
 libos.entrypoint = "/usr/bin/ruby"
-loader.argv_src_file = "file:/app/ruby_args.txt"
+loader.argv_src_file = "file:/manifest/ruby_args.txt"
 
 loader.log_level = "error"
 
@@ -18,7 +18,7 @@ sgx.trusted_files = [
   "file:{{ arch_libdir }}/",
   "file:/usr/{{ arch_libdir }}/",
   "file:/app/Hello.rb",
-  "file:/app/ruby_args.txt",
+  "file:/manifest/ruby_args.txt",
   "file:/usr/bin/ruby",
   "file:/usr/bin/ruby3.0",
   "file:/usr/lib/ruby/",

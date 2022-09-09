@@ -1,12 +1,12 @@
 version: '2'
 
 services:
-  ruby:
-    container_name: "ruby-demo"
+  ruby-sgx:
+    image: enclaive/ruby-sgx
+    container_name: "ruby-sgx"
     build: .
     volumes:
       - /var/run/aesmd/aesm.socket:/var/run/aesmd/aesm.socket
-      - /tmp/secret:/app/secret
     devices:
       - "/dev/sgx_enclave:/dev/sgx_enclave"
       - "/dev/sgx/enclave:/dev/sgx_enclave"
