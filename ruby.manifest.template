@@ -17,7 +17,7 @@ sgx.trusted_files = [
   "file:{{ gramine.runtimedir() }}/",
   "file:{{ arch_libdir }}/",
   "file:/usr/{{ arch_libdir }}/",
-  "file:/app/Hello.rb",
+  "file:/app/",
   "file:/manifest/ruby_args.txt",
   "file:/usr/bin/ruby",
   "file:/usr/bin/ruby3.0",
