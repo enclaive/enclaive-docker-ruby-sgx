@@ -3,9 +3,9 @@ begin
     file = File.open("/app/secret/HelloAgain.txt", "w")
     file.write("Hello SGX World from Ruby! \n") 
   rescue IOError => e
-    puts "Error - hmr...  seems so I'm not allowd to wirte the file :-( ..."
+    puts "Error - hmr...  seems so I'm not allowd to write the file :-( ..."
   ensure
     file.close unless file.nil?
   end
 
-  puts "Year I am done ... check the file ;-)"
+  puts "Yeah, I am done ... check the file ;-)"
