@@ -1,0 +1,32 @@
+loader.entrypoint = "file:{{ gramine.libos }}"
+
+libos.entrypoint = "/usr/bin/ruby"
+loader.argv_src_file = "file:/app/ruby_args.txt"
+
+loader.log_level = "error"
+
+loader.env.LD_LIBRARY_PATH = "/lib:{{ arch_libdir }}"
+
+sgx.debug = false
+sgx.nonpie_binary = true
+sgx.thread_num = 64
+sgx.enclave_size = "4G"
+
+sgx.trusted_files = [
+  "file:{{ gramine.libos }}",
+  "file:{{ gramine.runtimedir() }}/",
+  "file:{{ arch_libdir }}/",
+  "file:/usr/{{ arch_libdir }}/",
+  "file:/app/Hello.rb",
+  "file:/app/ruby_args.txt",
+  "file:/usr/bin/ruby",
+  "file:/usr/bin/ruby3.0",
+  "file:/usr/lib/ruby/",
+]
+
+fs.mounts = [
+    { path = "/usr",              uri = "file:/usr" },
+    { path = "/lib",              uri = "file:{{ gramine.runtimedir() }}" },
+    { path = "{{ arch_libdir }}", uri = "file:{{ arch_libdir }}" },
+    { path = "/app",              uri = "file:/app" },
+]
