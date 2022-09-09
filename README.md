@@ -13,10 +13,13 @@ In this demo the string `Hello SGX World from Ruby` is written into the file `He
 
 ## Building
 ```
-docker compose up --build --force-recreate
+docker compose build
 ```
 
 ## Running
+```
+docker compose up
+```
 Compare the files:
 ```
 cd /tmp/secret/
