@@ -28,8 +28,8 @@
   </p>  
        <tr>
        <td width="25%" halign="center" valign="top">
-      <a href="https://youtu.be/KrFgXp5BelI"><img    src="https://img.youtube.com/vi/KrFgXp5BelI/0.jpg"></img></a>
-        <br>Write a file into shared protected Volume (<a href="https://github.com/enclaive/enclaive-docker-ruby-sgx/tree/demo">read more</a>)
+      <a href="https://youtu.be/quzkMBYK-N8"><img    src="https://img.youtube.com/vi/KrFgXp5BelI/0.jpg"></img></a>
+        <br>Write a file into shared encrypted Volume (<a href="https://github.com/enclaive/enclaive-docker-ruby-sgx/tree/demo">read more</a>)
      </tr>
 </div>
 
